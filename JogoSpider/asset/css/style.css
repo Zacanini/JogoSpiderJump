@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgba(0, 0, 0, 0.523);
+    display: flex;
+    flex-direction: column;
+}
+
+.divBemVindo{
+display: flex;
+margin-top: 20px;
+}
+
+.bem-vindo{
+    position: absolute;
+    align-items: center;
+    font-size: 40px;
+    font-family: sans-serif;
+    margin-left:35%;
+
+    
+}
+
+.playButton{
+    all: unset;
+    text-align: center;
+    cursor: pointer;
+    font-size: 45px;
+    background: linear-gradient( #160303b4 , #191f83dd  );
+    opacity: 0.8;
+    border-radius: 25px;
+    padding: 20px;
+    width: 200px;
+    position: absolute;
+    margin-top: 170px;
+    margin-left: 40%;
+    color: #ffffff;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.697);
+}
+.playButton:hover{
+    background: linear-gradient( #1603035f , #191e836f  );
+    color: #000000;
+    padding: 22px;
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 55%;
+    min-width: 400px;
+    height: 100px;
+    background-color: #000000;
+    opacity: 0.8;
+    border-radius: 25px;
+    margin-top: 25px;
+    margin-left: 22%;
+    margin-bottom: 25px;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.851);
+}
+
+.fraseInfo {
+    color: #ffffff;
+    opacity: 0.9;
+    font-size: 20px;
+    margin-top: 3px;
+}
+
+.button {
+    display: flex;
+    background-color: bisque;
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    margin-top: 8px;
+    border-radius: 15px;
+    padding: 2px;
+}
+
+.button:hover {
+    background-color: transparent;
+    border: 2px solid white;
+    color: #ffffff;
+    padding: 1.5px;
+}
+
+.game-board{
+    width: 80%;
+    height: 500px;
+    border-bottom: 25px solid rgb(0, 0, 0);
+    margin: 0 auto;
+    margin-top: 100px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgb(15, 15, 56) , rgb(64, 75, 64));
+}
+
+.score{
+    background: linear-gradient( #160303b4 , #191f83dd  );
+    opacity: 0.8;
+    border-radius: 25px;
+    padding: 20px;
+    width: 100px;
+    position: absolute;
+    margin-top: 170px;
+    margin-left: 85%;
+    color: #ffffff;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.697);
+}
+
+.box-nuvem{
+    position: absolute;
+    animation: nuvem-animation 20s infinite linear;
+    
+}
+
+.lua{
+    position: absolute;
+    width: 500px;
+    bottom: 220px;
+}
+
+.nuvem1{
+    position: absolute;
+    width: 180px;
+}
+.nuvem2{
+    position: absolute;
+    width: 180px;
+    left: 300px;
+}
+.nuvem3{
+    position: absolute;
+    width: 180px;
+    left: 600px;
+}
+.nuvem4{
+    position: absolute;
+    width: 180px;
+    left: 900px;
+}
+.nuvem5{
+    position: absolute;
+    width: 180px;
+    left: 150px;
+    margin-top: 90px;
+}
+.nuvem6{
+    position: absolute;
+    width: 180px;
+    left: 450px;
+    margin-top: 90px;
+}
+.nuvem7{
+    position: absolute;
+    width: 180px;
+    left: 750px;
+    margin-top: 90px;
+}
+.nuvem8{
+    position: absolute;
+    width: 180px;
+    left: 1050px;
+    margin-top: 90px;
+}
+
+
+.pipe{
+    position: absolute;
+    bottom: -21px;
+    width: 350px;
+    animation: pipe-animation 1.7s infinite linear; 
+}
+
+.spider{
+    width: 110px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump{
+    animation: jump 500ms ease-out;
+}
+
+@keyframes jump {
+    0%{
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 260px
+    }
+
+    50%{
+        bottom: 260px;
+    }
+
+    60%{
+        bottom: 260px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+}
+
+@keyframes pipe-animation{
+    from{
+        right: -65%;
+    }
+
+    to{
+        right: 90%;
+    }
+}
+
+@keyframes nuvem-animation{
+    from{
+        right: 0;
+    }
+
+    to{
+        right: 150%;
+    }
+}
