@@ -10,17 +10,32 @@ body{
     flex-direction: column;
 }
 
-.divBemVindo{
-display: flex;
-margin-top: 20px;
+.gameover{
+    all: unset;
+    visibility: hidden;
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    align-items: center;
+    text-align: center;
+    border-radius: 25px;
+    padding: 50px;
+    background: linear-gradient( #160303b4 , #a51113dd  );
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.697);
 }
 
+
+
 .bem-vindo{
-    position: absolute;
+    text-align: center;
     align-items: center;
     font-size: 40px;
+    margin-top: 30px;
     font-family: sans-serif;
-    margin-left:35%;
+   
 
     
 }

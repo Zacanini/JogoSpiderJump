@@ -2,7 +2,8 @@
 const spider = document.querySelector('.spider');
 const pipe = document.querySelector('.pipe');
 const scoreElement = document.querySelector('.score');
-
+const gameOver = document.querySelector('.gameover');
+const nuvems = document.querySelector('.box-nuvem');
 //define o score como 0
 let score = 0;
 console.log(score);
@@ -41,12 +42,17 @@ const loop = () => {
     if (pipePosition <= -28 && pipePosition >= -220 && spiderPosition < 110) {
       pipe.style.animation = 'none';
       pipe.style.left = `${pipePosition}px`;
+
+      nuvems.style.animation = 'stop';
+
+      gameOver.style.visibility = 'visible';
   
       spider.style.animation = 'none';
       spider.style.bottom = `${spiderPosition}px`;
       spider.src = './image/spider3.gif';
       spider.style.width = '60px';
       spider.style.marginLeft = '10px';
+      
   
       
       setTimeout(() => {
